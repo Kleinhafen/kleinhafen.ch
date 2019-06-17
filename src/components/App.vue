@@ -1,2 +1,8 @@
-<template lang="pug" src="../templates/App.pug"></template>
-<style lang="stylus" src="../stylesheets/App.styl"></style>
+<template lang="pug" src="../templates/app.pug"></template>
+<style lang="stylus" src="../stylesheets/app.styl"></style>
+
+<script>
+export default {
+  name: 'app',
+}
+</script>

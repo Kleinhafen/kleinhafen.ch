@@ -1,0 +1,10 @@
+.IgFeed
+  .ig-pics
+    .ig-pic-container(
+      v-for='pic in pics'
+    )
+      .ig-pic(
+        :style='{backgroundImage: "url(" + pic + ")"}'
+      )
+  .ig-cta
+    a.btn.btn--outline-invert(href='https://instagram.com/kleinhafen') Follow us on Instagram

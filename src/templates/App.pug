@@ -1,4 +1,32 @@
-#app
-  .nav
-    router-link(to="/") Home
+.App
+  //-
+    nav
+      router-link(to='/') Home
   router-view
+  .footer
+    .impressum
+      img(src='~@/assets/img/kh-logo-black.png')
+      p
+        | Feldbergstrasse 37 & 49
+        br
+        | 4057 Basel
+        br
+        | 061 535 31 86
+        br
+        a(href='mailto:ahoi@kleinhafen.ch') ahoi@kleinhafen.ch
+      button.btn.btn--outline-invert Contact us
+    .bois
+      .socials
+        a.social(href='http://instagram.com/kleinhafen')
+          img(src='~@/assets/img/social/instagram.svg')
+        a.social(href='https://twitter.com/kleinhafenbasel')
+          img(src='~@/assets/img/social/twitter.svg')
+        a.social(href='http://www.meetup.com/de-DE/Kleinhafen-inspiriert-arbeiten/')
+          img(src='~@/assets/img/social/meetup.svg')
+        a.social(href='https://www.facebook.com/kleinhafen/')
+          img(src='~@/assets/img/social/facebook.svg')
+      //-
+        .cowoch
+          a(href='http://www.coworking.ch/')
+            img(src='~@/assets/img/cowoch.png')
+

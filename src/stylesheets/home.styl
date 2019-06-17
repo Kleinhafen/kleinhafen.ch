@@ -1,0 +1,106 @@
+@import './colors.styl'
+
+.Home
+  .kh-intro
+    padding 6rem
+    // background-color #f6f6f6
+    background-color color-kh-accent
+    color color-dark
+    .kh-intro__main
+      columns 2
+  .plans
+    margin 6rem 0
+    h2
+      font-size 1.7rem
+      margin-bottom 2rem
+    .plan-list
+      display flex
+      margin -2rem
+
+  .plan
+    flex 0 0 calc(50% - 4rem)
+    margin 2rem
+    .plan__image
+      height 22rem
+      background-color #eee
+      background-size cover
+      background-position center center
+    h3
+      margin 2rem 0
+      font-size 1.5rem
+      small
+        display block
+        font-size 1.0rem
+    .plan__desc
+      min-height 8rem
+    .plan__prices
+      margin 2rem 0
+    .plan__book
+      margin 2rem 0
+    .plan__features
+      margin 2rem 0
+      ul
+        padding-left 1rem
+        li
+          margin-bottom 0.4rem
+    .plan__gallery
+      margin 2rem 0
+
+  .plan.plan--flex
+    .plan__image
+      background-image url('~@/assets/img/plans/DSC_0182.jpg')
+    .plan__subimage-1
+      background-image url('~@/assets/img/feldbergstr-39-pre/IMG_0873.jpg')
+    .plan__subimage-2
+      background-image url('~@/assets/img/feldbergstr-39-pre/IMG_0348.jpg')
+
+  .plan.plan--fixed
+    .plan__image
+      background-image url('~@/assets/img/plans/KH_20160720_Sommeraktion_011.jpg')
+    .plan__subimage-1
+      background-image url('~@/assets/img/feldbergstr-47-pre/feldbergstrasse-47-05.jpg')
+    .plan__subimage-2
+      background-image url('~@/assets/img/feldbergstr-47-pre/n-wide2x-16x9-fill.jpg')
+
+  .priceset
+    display flex
+    margin-bottom 0.5rem
+    &:last-child
+      margin-bottom 0
+    .name, .price
+      flex 1
+    .price
+      text-align right
+
+.gallery
+  display flex
+  margin 0 -0.5rem
+  .gallery-item
+    flex 1
+    padding 0 0.5rem
+    .gallery-image
+      height 12rem
+      background-color #eee
+      background-size cover
+      background-position center center
+
+.kh-about
+  margin 6rem 0
+  .kh-about__blurb
+    padding 2rem
+    background-color color-silver
+    .kh-about__desc
+      display flex
+      .kh-about__logo
+        flex 0 1
+        padding-left 2rem
+        a
+          border none
+        img
+          height 5rem
+    .kh-about__cta
+      text-align left
+    .btn
+      margin-top 1rem
+  .IgFeed
+    margin-top 2rem
