@@ -1,8 +1,6 @@
 @import './colors.styl'
 
 .Home
-  .Hero
-    padding-top 3rem // navigation height
   .kh-intro
     padding 6rem
     // background-color #f6f6f6
@@ -19,6 +17,14 @@
       display flex
       margin -2rem
 
+  .bubble
+    display inline-block
+    margin-left 1rem
+    padding 0.1rem 0.3rem
+    font-size 0.8rem
+    text-transform uppercase
+    background-color color-kh-accent
+
   .plan
     flex 0 0 calc(50% - 4rem)
     margin 2rem
@@ -33,6 +39,10 @@
       small
         display block
         font-size 1.0rem
+        .pin
+          height 1rem
+          margin-left 0.5rem
+          vertical-align -2px
     .plan__desc
       min-height 8rem
     .plan__prices
@@ -41,7 +51,10 @@
       margin 2rem 0
     .plan__features
       margin 2rem 0
+      columns 2
+      min-height 16rem
       ul
+        margin 0
         padding-left 1rem
         li
           margin-bottom 0.4rem
@@ -50,7 +63,8 @@
 
   .plan.plan--flex
     .plan__image
-      background-image url('~@/assets/img/plans/DSC_0182.jpg')
+      background-position center center
+      background-image url('~@/assets/img/feldbergstr-39/DSC06122.jpg')
     .plan__subimage-1
       background-image url('~@/assets/img/feldbergstr-39-pre/IMG_0873.jpg')
     .plan__subimage-2
@@ -74,35 +88,46 @@
     .price
       text-align right
 
-.gallery
-  display flex
-  margin 0 -0.5rem
-  .gallery-item
-    flex 1
-    padding 0 0.5rem
-    .gallery-image
-      height 12rem
+  .gallery
+    display flex
+    margin 0 -0.5rem
+    .gallery-item
+      flex 1
+      padding 0 0.5rem
+      .gallery-image
+        height 12rem
+        background-color #eee
+        background-size cover
+        background-position center center
+
+  .meetingrooms
+    .meetingrooms__image
+      height 22rem
       background-color #eee
       background-size cover
       background-position center center
+      background-image url('~@/assets/img/feldbergstr-39/DSC06122.jpg')
+    .meetingrooms__desc
+      margin-top 2rem
+      max-width 40rem
 
-.kh-about
-  margin 6rem 0
-  .kh-about__blurb
-    padding 2rem
-    background-color color-silver
-    .kh-about__desc
-      display flex
-      .kh-about__logo
-        flex 0 1
-        padding-left 2rem
-        a
-          border none
-        img
-          height 5rem
-    .kh-about__cta
-      text-align left
-    .btn
-      margin-top 1rem
-  .IgFeed
-    margin-top 2rem
+  .kh-about
+    margin 6rem 0
+    .kh-about__blurb
+      padding 2rem
+      background-color color-silver
+      .kh-about__desc
+        display flex
+        .kh-about__logo
+          flex 0 1
+          padding-left 2rem
+          a
+            border none
+          img
+            height 5rem
+      .kh-about__cta
+        text-align left
+      .btn
+        margin-top 1rem
+    .IgFeed
+      margin-top 2rem

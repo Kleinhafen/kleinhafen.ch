@@ -12,7 +12,6 @@
           p At Kleinhafen, we offer custom-made workspaces for a focused and productive work session: simply turn on your computer and start working.
   .plans
     .container
-      h2 Our plans
       .plan-list
 
         .plan.plan--flex
@@ -22,6 +21,7 @@
             small
               a(href='https://www.google.com/maps/place/Feldbergstrasse+39,+4057+Basel')
                 | Feldbergstrasse 39
+                img.pin(src='~@/assets/img/pin.svg')
           .plan__desc
             p Do you need a workspace for just two days a week? Are you in Basel for an assignment?
             p Start with a 10-day pass to our coworking space.
@@ -29,23 +29,26 @@
             button.btn.btn--book Book a free personal tour now
           .plan__prices
             .priceset
-              .name 10-day pass
-              .price CHF 25.—/day
+              .name Monthly
+              .price #[span.discount 240] 140.— CHF
             .priceset
-              .name Monthtly pass
-              .price CHF 350.—/month
+              .name Hourly
+              .price 5.50 CHF
+            .priceset
+              .name Daily
+              .price 27.— CHF
           .plan__features
             ul
-              li Wi-Fi & printers
-              li Coffee & snacks
-              li Fully-equipped kitchen
-              li Flexible working environment
-          .plan__gallery
-            .gallery
-              .gallery-item
-                .gallery-image.plan__subimage-1
-              .gallery-item
-                .gallery-image.plan__subimage-2
+              li Central location
+              li High-speed internet
+              li Speciality coffee
+              li Whole-leaf tea
+              li Printer/scanner
+              li Cleaning
+              li No cancellation notice
+              li No min. contract length
+              li Kitchen/lounge/garden
+              li Community events
 
         .plan.plan--fixed
           .plan__image
@@ -54,6 +57,8 @@
             small
               a(href='https://www.google.com/maps/place/Feldbergstrasse+47,+4057+Basel')
                 | Feldbergstrasse 47
+                img.pin(src='~@/assets/img/pin.svg')
+              .bubble from August
           .plan__desc
             p Do you work full-time and need space for a big screen, a mailbox, and document storage?
             p Book your fixed coworking desk with a 6-month minimum contract.
@@ -61,23 +66,42 @@
             button.btn.btn--book Book a free personal tour now
           .plan__prices
             .priceset
-              .name Monthly contract
-              .price CHF 450.—/month
+              .name Monthly
+              .price #[span.discount 450] 390.— CHF
             .priceset
-              .name Yearly contract
-              .price CHF 4950.—/year
+              .name &nbsp;
+              .price &nbsp;
+            .priceset
+              .name &nbsp;
+              .price &nbsp;
           .plan__features
             ul
-              li Everything listed before
+              li Central location
+              li High-speed internet
+              li Speciality coffee
+              li Whole-leaf tea
+              li Printer/scanner
+              li Cleaning
+              li No cancellation notice
+              li No min. contract length
+              li Kitchen/lounge/garden
+              li Community events
+              li Flipcharts
+              li Projector
+              li Meeting room
+              li Storage
+              li Address
               li 24/7 access
-              li Friendly community
-              li 1-month notice to cancel
-          .plan__gallery
-            .gallery
-              .gallery-item
-                .gallery-image.plan__subimage-1
-              .gallery-item
-                .gallery-image.plan__subimage-2
+              li Use of FB 39 and FB 47
+
+  .meetingrooms
+    .container
+      h3 Meeting rooms and storefront
+      .meetingrooms__image
+      .meetingrooms__desc
+        p We have flexible meeting rooms designed to fit all your needs. Whether it’s leading brainstorming sessions, organizing team-building workshops, throwing product launch events or hosting an apéro, we have you covered.
+        button.btn.btn--book Book a meeting room now
+
   .kh-about
     .container
       h2 About Kleinhafen
