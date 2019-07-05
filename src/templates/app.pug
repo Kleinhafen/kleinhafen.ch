@@ -1,8 +1,9 @@
 .App
-  nav
-    router-link(to='/') Home
-    router-link(to='/about') About
-    router-link(to='/contact') Contact
+  //-
+    nav
+      router-link(to='/') Home
+      router-link(to='/about') About
+      router-link(to='/contact') Contact
   router-view
   .footer
     .impressum
@@ -15,7 +16,9 @@
         | 061 535 31 86
         br
         a(href='mailto:ahoi@kleinhafen.ch') ahoi@kleinhafen.ch
-      button.btn.btn--outline-invert Contact us
+      a.btn.btn--outline-invert(
+        href='mailto:ahoi@kleinhafen.ch'
+      ) Contact us
     .bois
       .socials
         a.social(href='http://instagram.com/kleinhafen')

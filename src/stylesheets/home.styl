@@ -9,7 +9,6 @@
     .kh-intro__main
       columns 2
   .plans
-    margin 6rem 0
     h2
       font-size 1.7rem
       margin-bottom 2rem
@@ -30,9 +29,6 @@
     margin 2rem
     .plan__image
       height 22rem
-      background-color #eee
-      background-size cover
-      background-position center center
     h3
       margin 2rem 0
       font-size 1.5rem
@@ -51,6 +47,7 @@
       margin 2rem 0
     .plan__features
       margin 2rem 0
+      margin-bottom 0
       columns 2
       min-height 16rem
       ul
@@ -88,31 +85,34 @@
     .price
       text-align right
 
-  .gallery
-    display flex
-    margin 0 -0.5rem
-    .gallery-item
-      flex 1
-      padding 0 0.5rem
-      .gallery-image
-        height 12rem
-        background-color #eee
-        background-size cover
-        background-position center center
-
   .meetingrooms
     .meetingrooms__image
       height 22rem
-      background-color #eee
-      background-size cover
-      background-position center center
-      background-image url('~@/assets/img/feldbergstr-39/DSC06122.jpg')
+      background-image url('~@/assets/img/meeting-rooms/DSCF2916-2.jpg')
+      background-position center -300px
     .meetingrooms__desc
+      margin-top 2rem
+      padding-left 40%
+
+  .storefront
+    .storefront__group
+      display flex
+      align-items flex-end
+      margin 0 -2rem
+      .storefront__imagewrapper,
+      .storefront__desc
+        flex 0 0 calc(50% - 4rem)
+        margin 0 2rem
+    .storefront__imagewrapper
+      padding-right 4rem
+    .storefront__image
+      height 30rem
+      background-image url('~@/assets/img/meeting-rooms/DSC06118.jpg')
+    .storefront__desc
       margin-top 2rem
       max-width 40rem
 
   .kh-about
-    margin 6rem 0
     .kh-about__blurb
       padding 2rem
       background-color color-silver
