@@ -33,6 +33,50 @@ h1, h2, h3, h4, h5, h6
   &:last-child
     margin-bottom 0
 
+.form-group
+  margin-bottom 1.5rem
+  &:last-child
+    margin-bottom 0
+  input, textarea
+    box-shadow none // reset
+    background white // reset
+    border 1px solid #bbb // reset
+    display block
+    width 100%
+    border-radius 0
+  input
+    padding 0.7rem
+  textarea
+    min-height 6rem
+    padding 0.7rem
+
+.btn
+  margin 0
+  padding 0
+  border 0
+  box-shadow 0
+  background none
+  //
+  display inline-block
+  padding 0.8rem 1rem
+  background color-kh-accent
+  cursor pointer
+  font-size 0.8rem
+  text-transform uppercase
+  letter-spacing 1px
+  &.btn--block
+    display block
+    width 100%
+  &.btn--book
+    display block
+    width 100%
+    padding 1.5rem
+    font-size 1rem
+  &.btn--outline-invert
+    border 1px solid color-dark
+    color color-dark
+    background-color transparent
+
 .coverimage
   background-color #eee
   background-size cover
@@ -52,30 +96,6 @@ h1, h2, h3, h4, h5, h6
 .container
   max-width 1100px
   margin 0 auto
-
-.btn
-  margin 0
-  padding 0
-  border 0
-  box-shadow 0
-  background none
-  //
-  display inline-block
-  padding 0.8rem 1rem
-  background color-kh-accent
-  cursor pointer
-  font-size 0.8rem
-  text-transform uppercase
-  letter-spacing 1px
-  &.btn--book
-    display block
-    width 100%
-    padding 1.5rem
-    font-size 1rem
-  &.btn--outline-invert
-    border 1px solid color-dark
-    color color-dark
-    background-color transparent
 
 .App
   // padding-top 3rem // navigation height

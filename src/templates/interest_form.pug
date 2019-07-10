@@ -1,0 +1,58 @@
+.InterestForm
+  .container.InterestForm__container
+    button.InterestForm__close(@click='close') &times;
+
+    .InterestForm__inner
+      template(v-if='isSubmitted')
+        h2 Great!
+        p We've received your info and will get back to you as soon as possible.
+        button.btn.btn--block(@click='close') Close
+      template(v-else)
+        template(v-if='formType == "flexDesk"')
+          h2 Let's book a flex desk tour.
+        template(v-if='formType == "fixedDesk"')
+          h2 Let's book a fixed desk tour.
+        template(v-if='formType == "meetingRoom"')
+          h2 Let's book a meeting room.
+        template(v-if='formType == "storefront"')
+          h2 Let's book the storefront.
+
+        .form-group
+          label Your name
+          input(type='text', v-model='formData.name')
+
+        .form-group
+          label Your company
+          input(type='text', v-model='formData.company')
+
+        .form-group
+          label Your email
+          input(type='email', v-model='formData.email')
+
+        .form-group
+          label Your phone number
+          input(type='tel', v-model='formData.phone')
+
+        .form-group(v-if='formType == "meetingRoom"')
+          label How many people?
+          input(type='text', v-model='formData.nPeople')
+
+        .form-group(v-if='formType == "flexDesk" || formType == "fixedDesk"')
+          label When would you like to have your tour?
+          input(type='text', v-model='formData.dates')
+
+        .form-group(v-if='formType == "meetingRoom"')
+          label When would you need our meeting rooms?
+          input(type='text', v-model='formData.dates')
+
+        .form-group(v-if='formType == "storefront"')
+          label When would you like to rent the storefront from, and for how long?
+          input(type='text', v-model='formData.dates')
+
+        .form-group(v-if='formType == "meetingRoom" || formType == "storefront"')
+          label(v-if='formType == "meetingRoom"') Tell us more about your event and what we could help you with.
+          label(v-if='formType == "storefront"') Tell us more about what you'd like to use the storefront for.
+          textarea(v-model='formData.description')
+
+        .form-group
+          button.btn.btn--block(@click='submit') Send

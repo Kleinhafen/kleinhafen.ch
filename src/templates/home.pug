@@ -1,5 +1,10 @@
 .Home
   Hero
+  InterestForm(
+    v-if='formType'
+    :formType='formType'
+    @close='formType = ""',
+  )
   .kh-intro
     .container
       h2 The coworking experience
@@ -26,7 +31,9 @@
             p Do you need a workspace for just two days a week? Are you in Basel for an assignment?
             p Start with a 10-day pass to our coworking space.
           .plan__book
-            button.btn.btn--book Book a free personal tour now
+            button.btn.btn--book(
+              @click='setFormType("flexDesk")'
+            ) Book a free personal tour now
           .plan__prices
             .priceset
               .name Monthly
@@ -63,7 +70,9 @@
             p Do you work full-time and need space for a big screen, a mailbox, and document storage?
             p Book your fixed coworking desk with a 6-month minimum contract.
           .plan__book
-            button.btn.btn--book Book a free personal tour now
+            button.btn.btn--book(
+              @click='setFormType("fixedDesk")'
+            ) Book a free personal tour now
           .plan__prices
             .priceset
               .name Monthly
@@ -109,7 +118,9 @@
             li hosting an apéro
             li or having a silent one on one meeting,
           | we have you covered.
-        button.btn.btn--book Ask about our meeting rooms
+        button.btn.btn--book(
+          @click='setFormType("meetingRoom")'
+        ) Ask about our meeting rooms
 
   .storefront.section
     .container
@@ -121,7 +132,9 @@
           p We see our coworking space as a platform, therefore we showcase products and services in our storefront at Feldbergtrasse 39.
           p Do you have a web shop and need physical presence?
           p Do you want to position your product in Basel or you want to take part in the atmosphere of Feldbergstrasse? Speak to us about it!
-          button.btn.btn--book Ask about our storefront
+          button.btn.btn--book(
+            @click='setFormType("storefront")'
+          ) Ask about our storefront
 
   .kh-about.section
     .container
