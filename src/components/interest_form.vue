@@ -3,8 +3,7 @@
 
 <script>
 import axios from 'axios'
-
-const API_URL = 'http://localhost:9000/';
+import config from '../../config/config.js'
 
 export default {
   name: 'InterestForm',
@@ -39,7 +38,7 @@ export default {
     },
     submit() {
       axios.post(
-        API_URL + 'interest-form-message',
+        config.apiUrl + 'interest-form-message',
         this.formData
       ).then((res) => {
         this.isSubmitted = true
