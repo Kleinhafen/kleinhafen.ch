@@ -1,9 +1,12 @@
 @import './colors.styl'
+@import './responsive.styl'
 
 .footer
   padding 6rem
   text-align center
   background color-kh-accent
+  +respond-below(lg-screen)
+    padding 6rem 2rem
   a
     border none
   .impressum
