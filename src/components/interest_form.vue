@@ -17,6 +17,7 @@ export default {
         phone: '',
         company: '',
         dates: '',
+        tourDates: '',
         nPeople: '',
         description: '',
       },
@@ -29,6 +30,7 @@ export default {
       this.formData.phone = ''
       this.formData.company = ''
       this.formData.dates = ''
+      this.formData.tourDates = ''
       this.formData.nPeople = ''
       this.formData.description = ''
     },
