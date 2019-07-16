@@ -39,7 +39,7 @@ export default {
     submit() {
       axios.post(
         config.apiUrl + 'interest-form-message',
-        this.formData
+        { ...this.formData, formType: this.formType }
       ).then((res) => {
         this.isSubmitted = true
       }).catch((err) => {
