@@ -1,3 +1,6 @@
+@import './colors.styl'
+@import './responsive.styl'
+
 .InterestForm
   position fixed
   top 0
@@ -7,13 +10,15 @@
   z-index 50
   padding 6rem 0
   background-color rgba(0,0,0,0.3)
+  +respond-below(lg-screen)
+    padding 0
   .InterestForm__container
     position relative
     background white
     max-height 100%
     overflow-y scroll
     .InterestForm__inner
-      padding 2rem
+      padding 2rem 0
     h2
       margin-top 0
     .InterestForm__close
