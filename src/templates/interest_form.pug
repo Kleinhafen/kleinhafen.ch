@@ -49,9 +49,16 @@
           label When would you like to rent the storefront from, and for how long?
           input(type='text', v-model='formData.dates')
 
-        .form-group(v-if='formType == "meetingRoom" || formType == "storefront"')
-          label(v-if='formType == "meetingRoom"') Tell us more about your event and what we could help you with.
-          label(v-if='formType == "storefront"') Tell us more about what you'd like to use the storefront for.
+        .form-group(v-if='formType == "flexDesk" || formType == "fixedDesk"')
+          label Any questions? :)
+          textarea(v-model='formData.description')
+
+        .form-group(v-if='formType == "meetingRoom"')
+          label Tell us more about your event and what we could help you with.
+          textarea(v-model='formData.description')
+
+        .form-group(v-if='formType == "storefront"')
+          label Tell us more about what you'd like to use the storefront for.
           textarea(v-model='formData.description')
 
         .form-group
