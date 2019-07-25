@@ -1,29 +1,28 @@
 # kleinhafen.ch
 
-## Project setup
+This is the Kleinhafen website!
+
+## Configuration
+
+Set the URL to the Kleinhafen API in `config.js`, with a trailing slash:
+
 ```
-npm install
+apiUrl: 'https://kleinhafen.ch/api/',
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+If the website uses HTTPS, note that this URL needs to be HTTPS too.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Install dependencies with `npm install`.
 
-### Run your tests
-```
-npm run test
-```
+## Development
 
-### Lints and fixes files
-```
-npm run lint
-```
+Run the development serve with `npm run serve`.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Production
+
+Compile the website as static files for production with `npm run build`.
+You can then point an e.g. nginx server to the `dist/` folder.
+
+## Author / Contact
+
+* Vlad-Stefan Harbuz <vlad@vladh.net>
