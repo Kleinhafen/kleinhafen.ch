@@ -29,15 +29,15 @@
                 img.pin(src='~@/assets/img/pin.svg')
           .plan__desc
             p Do you need a workspace for just two days a week? Are you in Basel for an assignment?
-            p Start with a 10-day pass to our coworking space.
+            p Drop by for a quick hour of coworking for less than the price of a coffee!
           .plan__book
             button.btn.btn--book(
               @click='setFormType("flexDesk")'
             ) Book a personal tour now
           .plan__prices
             .priceset
-              .name Monthly
-              .price #[span.discount 240] 140.— CHF
+              .name Monthly #[.bubble Early bird]
+              .price #[span.discount 240] #[.bubble 140.— CHF]
             .priceset
               .name Hourly
               .price 5.50 CHF
@@ -65,18 +65,17 @@
               a(href='https://www.google.com/maps/place/Feldbergstrasse+47,+4057+Basel')
                 | Feldbergstrasse 47
                 img.pin(src='~@/assets/img/pin.svg')
-              .bubble from August
           .plan__desc
             p Do you work full-time and need space for a big screen, a mailbox, and document storage?
-            p Book your fixed coworking desk with a 6-month minimum contract.
+            p Book your fixed coworking desk and join our community!
           .plan__book
             button.btn.btn--book(
               @click='setFormType("fixedDesk")'
             ) Book a personal tour now
           .plan__prices
             .priceset
-              .name Monthly
-              .price #[span.discount 450] 390.— CHF
+              .name Monthly #[.bubble Early bird]
+              .price #[span.discount 450] #[.bubble 390.— CHF]
             .priceset.priceset--dummy
               .name &nbsp;
               .price &nbsp;
