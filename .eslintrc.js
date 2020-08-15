@@ -16,6 +16,7 @@ module.exports = {
     'no-unused-vars': ['error', {'args': 'none'}],
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
+    sourceType: 'module',
   }
 }
