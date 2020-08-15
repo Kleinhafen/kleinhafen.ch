@@ -27,16 +27,21 @@ You can then point an e.g. nginx server to the `dist/` folder.
 
 ### Do now
 
-* Add German version
-* Change pricing structure: Membership (190.—), Fix Desk (+200.—)
-* Remove duplicate features between the two plans
-* Renew SSL
+* [ ] Add German version
+* [x] Change pricing structure: Membership (190.—), Fix Desk (+200.—)
+* [x] Remove duplicate features between the two plans
+* [ ] Renew SSL
+
+### Stuff we need
+
+* [ ] Change text for flex desk → KH membership?
+* [ ] Hourly/daily prices for flex desk → KH membership?
 
 ### Wait for materials
 
-* Make features clearer
-* Update photos for plans
-* Update header video
+* [ ] Make features clearer
+* [ ] Update photos for plans
+* [ ] Update header video
 
 ## Author / Contact
 
