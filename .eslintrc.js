@@ -8,12 +8,12 @@ module.exports = {
     'eslint:recommended',
   ],
   rules: {
+    'space-before-function-paren': 'off',
+    'no-unused-vars': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'comma-dangle': 0,
     'no-new': 0,
-    'space-before-function-paren': ['error', 'never'],
-    'no-unused-vars': ['error', {'args': 'none'}],
   },
   parserOptions: {
     parser: 'babel-eslint',
