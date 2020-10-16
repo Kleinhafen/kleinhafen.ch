@@ -1,13 +1,29 @@
 .Home
   .kh-intro
+    position relative
     padding 6rem 0
-    // background-color #f6f6f6
     background-color color-kh-accent
     color color-dark
     .kh-intro__main
       columns 2
       +respond-below(lg-screen)
         columns 1
+    .language-selector
+      position absolute
+      z-index 100
+      top -3rem
+      right 0
+      display flex
+      align-items center
+      height 3rem
+      padding 0 2rem
+      background-color color-kh-accent
+      .language-button
+        margin-right 2rem
+        &:last-child
+          margin-right 0
+        &.language-button--active
+          border-bottom 1px solid color-dark
 
   .plans
     h2

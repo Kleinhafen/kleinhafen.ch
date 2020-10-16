@@ -56,11 +56,12 @@ app.use('^/:targetLang*', (req, res, next) => {
     });
   }
   req.dict = dictionary[req.params['targetLang']];
+  req.lang = req.params['targetLang']
   next();
 });
 
 app.get('/:targetLang', (req, res) => {
-  res.render('home', {dict: req.dict});
+  res.render('home', {dict: req.dict, lang: req.lang});
 });
 
 app.use((err, req, res, next) => {

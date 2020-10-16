@@ -117,15 +117,24 @@ block content
               button.btn.btn--block(data-click='submitInterestForm("storefront")') Send
 
     .kh-intro
+      .language-selector
+        a(
+          href='/en',
+          class="language-button " + (lang == "en" ? "language-button--active" : "")
+        ) English
+        a(
+          href='/de',
+          class="language-button " + (lang == "de" ? "language-button--active" : "")
+        ) Deutsch
       .container
-        h2 The coworking experience
+        h2= dict['intro.heading']
         .kh-intro__main
           .nobreak
-            p {{$t('home.intro.p1')}}
-            p {{$t('home.intro.p2')}}
+            p= dict['intro.p1']
+            p= dict['intro.p2']
           .nobreak
-            p {{$t('home.intro.p3')}}
-            p {{$t('home.intro.p4')}}
+            p= dict['intro.p3']
+            p= dict['intro.p4']
     .plans.section
       .container
         .plan-list
@@ -139,49 +148,51 @@ block content
                   | Feldbergstrasse 39
                   img.pin(src='/img/pin.svg')
             .plan__desc
-              p Do you need a workspace for just two days a week? Are you in Basel for an assignment?
-              p Drop by for a quick hour of coworking for less than the price of a coffee!
+              p= dict['plans.membership.p1']
+              p= dict['plans.membership.p2']
+              p= dict['plans.membership.p3']
+              p= dict['plans.membership.p4']
             .plan__book
-              button.btn.btn--book(data-click='openInterestForm("membership")') Book a personal tour now
+              button.btn.btn--book(data-click='openInterestForm("membership")')= dict['plans.membership.bookTour']
             .plan__prices
               .priceset
-                .name Monthly
+                .name= dict['plans.monthly']
                 .price 190.— CHF
               .priceset
-                .name Hourly
+                .name= dict['plans.hourly']
                 .price 5.50 CHF
               .priceset
-                .name Daily
+                .name= dict['plans.daily']
                 .price 27.— CHF
             .plan__features
               ul
-                li Central location
-                li High-speed internet
-                li Speciality coffee
-                li Whole-leaf tea
-                li Printer/scanner
-                li Cleaning
-                li No cancellation notice
-                li No min. contract length
-                li Kitchen/lounge/garden
-                li Community events
+                li= dict['plans.location']
+                li= dict['plans.internet']
+                li= dict['plans.coffee']
+                li= dict['plans.tea']
+                li= dict['plans.printer']
+                li= dict['plans.cleaning']
+                li= dict['plans.cancellation']
+                li= dict['plans.contractLength']
+                li= dict['plans.kitchenLoungeGarden']
+                li= dict['plans.events']
 
           .plan.plan--fixed
             .plan__image.coverimage
             h3
-              | Fixed desk
+              | #{dict['plans.fixedDesk.heading']}
               small
                 a(href='https://www.google.com/maps/place/Feldbergstrasse+47,+4057+Basel')
                   | Feldbergstrasse 47
                   img.pin(src='/img/pin.svg')
             .plan__desc
-              p Do you work full-time and need space for a big screen, a mailbox, and document storage?
-              p Book your fixed coworking desk and join our community!
+              p= dict['plans.fixedDesk.p1']
+              p= dict['plans.fixedDesk.p2']
             .plan__book
-              button.btn.btn--book(data-click='openInterestForm("fixedDesk")') Book a personal tour now
+              button.btn.btn--book(data-click='openInterestForm("fixedDesk")')= dict['plans.membership.bookTour']
             .plan__prices
               .priceset
-                .name Monthly
+                .name= dict['plans.monthly']
                 .price Membership + 200.— CHF
               .priceset.priceset--dummy
                 .name &nbsp;
@@ -191,30 +202,30 @@ block content
                 .price &nbsp;
             .plan__features
               ul
-                li Flipcharts
-                li Projector
-                li Meeting room
-                li Storage
-                li Address
-                li 24/7 access
-                li Use of FB 39 and FB 47
+                li= dict['plans.flipcharts']
+                li= dict['plans.projector']
+                li= dict['plans.meetingRoom']
+                li= dict['plans.storage']
+                li= dict['plans.address']
+                li= dict['plans.access']
+                li= dict['plans.useOfBoth']
 
     .meetingrooms.section
       .container
-        h3 Meeting rooms
+        h3= dict['meetingRooms.heading']
         .meetingrooms__image.coverimage
         .meetingrooms__desc
-          p We have flexible meeting rooms designed to fit all your needs.
+          p= dict['meetingRooms.p1']
           p
-            | Whether it's
+            | #{dict['meetingRooms.list.start']}
             ul
-              li leading brainstorming sessions in an enclosed meeting room
-              li organizing team-building workshops in an open space
-              li product launch events with the support of our kitchen
-              li hosting an apéro
-              li or having a silent one on one meeting,
-            | we have you covered.
-          button.btn.btn--book(data-click='openInterestForm("meetingRoom")') Ask about our meeting rooms
+              li= dict['meetingRooms.list.item1']
+              li= dict['meetingRooms.list.item2']
+              li= dict['meetingRooms.list.item3']
+              li= dict['meetingRooms.list.item4']
+              li= dict['meetingRooms.list.item5']
+            | #{dict['meetingRooms.list.end']}
+          button.btn.btn--book(data-click='openInterestForm("meetingRoom")')= dict['meetingRooms.bookTour'] 
 
     .storefront.section
       .container
@@ -222,26 +233,26 @@ block content
           .storefront__imagewrapper
             .storefront__image.coverimage
           .storefront__desc
-            h3 Storefront
-            p We see our coworking space as a platform, therefore we showcase products and services in our storefront at Feldbergtrasse 39.
-            p Do you have a web shop and need physical presence?
-            p Do you want to position your product in Basel or you want to take part in the atmosphere of Feldbergstrasse? Speak to us about it!
-            button.btn.btn--book(data-click='openInterestForm("storefront")') Ask about our storefront
+            h3= dict['storefront.heading']
+            p= dict['storefront.p1']
+            p= dict['storefront.p2']
+            p= dict['storefront.p3']
+            button.btn.btn--book(data-click='openInterestForm("storefront")')= dict['storefront.bookTour']
 
     .kh-about.section
       .container
-        h2 About Kleinhafen
+        h2= dict['aboutkh.heading']
         .kh-about__blurb
           .kh-about__desc
             .kh-about__logo
               a(href='http://www.coworking.ch/')
                 img(src='/img/cowoch.png')
-            p Kleinhafen opened in March 2016. We designed the space from scratch and built it up ourselves, and we are in love with our achievements. We are committed to developing our environment, and we have dedicated ourselves to our coworkers and their feedback.
+            p= dict['aboutkh.p1']
 
         .IgFeed
           .ig-pics
           .ig-cta
-            a.btn.btn--outline-invert(href='https://instagram.com/kleinhafen') Follow us on Instagram
+            a.btn.btn--outline-invert(href='https://instagram.com/kleinhafen')= dict['igfeed.follow']
 
 block scripts
   script(src='/js/home.js')
