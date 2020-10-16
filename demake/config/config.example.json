@@ -1,0 +1,11 @@
+{
+  "email": {
+    "user": "subing@kleinhafen.ch",
+    "password": ""
+  },
+  "instagram": {
+    "access_token": "",
+    "access_token_update_at": 0,
+    "user_id": 12345
+  }
+}

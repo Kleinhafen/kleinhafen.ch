@@ -1,0 +1,247 @@
+extends layout
+
+block content
+  .Home
+    .Hero
+      .hero__video-container
+        .hero__overlay
+        iframe(src='//player.vimeo.com/video/170963719?api=1&background=1')
+      .hero__content
+        .hero__logo
+          img(src='/img/kh-logo.png')
+
+    .InterestForm(hidden)
+      .container.InterestForm__container
+        button.InterestForm__close(data-click='closeInterestForm()') &times;
+
+        .InterestForm__inner
+          .InterestForm__success(hidden)
+            h2 Great!
+            p We've received your info and will get back to you as soon as possible.
+            button.btn.btn--block(data-click='closeInterestForm()') Close
+
+          .InterestForm__form(data-form='membership', hidden)
+            h2 Let's book a tour.
+            .form-group
+              label Your name
+              input(type='text', name='name')
+            .form-group
+              label Your company
+              input(type='text', name='company')
+            .form-group
+              label Your email
+              input(type='email', name='email')
+            .form-group
+              label Your phone number
+              input(type='tel', name='phone')
+            .form-group
+              label When would you like to have your tour?
+              input(type='text', name='tourDates')
+            .form-group
+              label Any questions? :)
+              textarea(name='description')
+            .form-group
+              button.btn.btn--block(data-click='submitInterestForm("membership")') Send
+
+          .InterestForm__form(data-form='fixedDesk', hidden)
+            h2 Let's book a fixed desk tour.
+
+            .form-group
+              label Your name
+              input(type='text', name='name')
+            .form-group
+              label Your company
+              input(type='text', name='company')
+            .form-group
+              label Your email
+              input(type='email', name='email')
+            .form-group
+              label Your phone number
+              input(type='tel', name='phone')
+            .form-group
+              label When would you like to have your tour?
+              input(type='text', name='tourDates')
+            .form-group
+              label Any questions? :)
+              textarea(name='description')
+            .form-group
+              button.btn.btn--block(data-click='submitInterestForm("fixedDesk")') Send
+
+          .InterestForm__form(data-form='meetingRoom', hidden)
+            h2 Let's book a meeting room.
+            .form-group
+              label Your name
+              input(type='text', name='name')
+            .form-group
+              label Your company
+              input(type='text', name='company')
+            .form-group
+              label Your email
+              input(type='email', name='email')
+            .form-group
+              label Your phone number
+              input(type='tel', name='phone')
+            .form-group
+              label How many people?
+              input(type='text', name='nPeople')
+            .form-group
+              label When would you need our meeting rooms?
+              input(type='text', name='dates')
+            .form-group
+              label Tell us more about your event and what we could help you with.
+              textarea(name='description')
+            .form-group
+              button.btn.btn--block(data-click='submitInterestForm("meetingRoom")') Send
+
+          .InterestForm__form(data-form='storefront', hidden)
+            h2 Let's book the storefront.
+            .form-group
+              label Your name
+              input(type='text', name='name')
+            .form-group
+              label Your company
+              input(type='text', name='company')
+            .form-group
+              label Your email
+              input(type='email', name='email')
+            .form-group
+              label Your phone number
+              input(type='tel', name='phone')
+            .form-group
+              label When would you like to rent the storefront from, and for how long?
+              input(type='text', name='dates')
+            .form-group
+              label Tell us more about what you'd like to use the storefront for.
+              textarea(name='description')
+            .form-group
+              button.btn.btn--block(data-click='submitInterestForm("storefront")') Send
+
+    .kh-intro
+      .container
+        h2 The coworking experience
+        .kh-intro__main
+          .nobreak
+            p {{$t('home.intro.p1')}}
+            p {{$t('home.intro.p2')}}
+          .nobreak
+            p {{$t('home.intro.p3')}}
+            p {{$t('home.intro.p4')}}
+    .plans.section
+      .container
+        .plan-list
+
+          .plan.plan--flex
+            .plan__image.coverimage
+            h3
+              | Kleinhafen Membership
+              small
+                a(href='https://www.google.com/maps/place/Feldbergstrasse+39,+4057+Basel')
+                  | Feldbergstrasse 39
+                  img.pin(src='/img/pin.svg')
+            .plan__desc
+              p Do you need a workspace for just two days a week? Are you in Basel for an assignment?
+              p Drop by for a quick hour of coworking for less than the price of a coffee!
+            .plan__book
+              button.btn.btn--book(data-click='openInterestForm("membership")') Book a personal tour now
+            .plan__prices
+              .priceset
+                .name Monthly
+                .price 190.— CHF
+              .priceset
+                .name Hourly
+                .price 5.50 CHF
+              .priceset
+                .name Daily
+                .price 27.— CHF
+            .plan__features
+              ul
+                li Central location
+                li High-speed internet
+                li Speciality coffee
+                li Whole-leaf tea
+                li Printer/scanner
+                li Cleaning
+                li No cancellation notice
+                li No min. contract length
+                li Kitchen/lounge/garden
+                li Community events
+
+          .plan.plan--fixed
+            .plan__image.coverimage
+            h3
+              | Fixed desk
+              small
+                a(href='https://www.google.com/maps/place/Feldbergstrasse+47,+4057+Basel')
+                  | Feldbergstrasse 47
+                  img.pin(src='/img/pin.svg')
+            .plan__desc
+              p Do you work full-time and need space for a big screen, a mailbox, and document storage?
+              p Book your fixed coworking desk and join our community!
+            .plan__book
+              button.btn.btn--book(data-click='openInterestForm("fixedDesk")') Book a personal tour now
+            .plan__prices
+              .priceset
+                .name Monthly
+                .price Membership + 200.— CHF
+              .priceset.priceset--dummy
+                .name &nbsp;
+                .price &nbsp;
+              .priceset.priceset--dummy
+                .name &nbsp;
+                .price &nbsp;
+            .plan__features
+              ul
+                li Flipcharts
+                li Projector
+                li Meeting room
+                li Storage
+                li Address
+                li 24/7 access
+                li Use of FB 39 and FB 47
+
+    .meetingrooms.section
+      .container
+        h3 Meeting rooms
+        .meetingrooms__image.coverimage
+        .meetingrooms__desc
+          p We have flexible meeting rooms designed to fit all your needs.
+          p
+            | Whether it's
+            ul
+              li leading brainstorming sessions in an enclosed meeting room
+              li organizing team-building workshops in an open space
+              li product launch events with the support of our kitchen
+              li hosting an apéro
+              li or having a silent one on one meeting,
+            | we have you covered.
+          button.btn.btn--book(data-click='openInterestForm("meetingRoom")') Ask about our meeting rooms
+
+    .storefront.section
+      .container
+        .storefront__group
+          .storefront__imagewrapper
+            .storefront__image.coverimage
+          .storefront__desc
+            h3 Storefront
+            p We see our coworking space as a platform, therefore we showcase products and services in our storefront at Feldbergtrasse 39.
+            p Do you have a web shop and need physical presence?
+            p Do you want to position your product in Basel or you want to take part in the atmosphere of Feldbergstrasse? Speak to us about it!
+            button.btn.btn--book(data-click='openInterestForm("storefront")') Ask about our storefront
+
+    .kh-about.section
+      .container
+        h2 About Kleinhafen
+        .kh-about__blurb
+          .kh-about__desc
+            .kh-about__logo
+              a(href='http://www.coworking.ch/')
+                img(src='/img/cowoch.png')
+            p Kleinhafen opened in March 2016. We designed the space from scratch and built it up ourselves, and we are in love with our achievements. We are committed to developing our environment, and we have dedicated ourselves to our coworkers and their feedback.
+
+        .IgFeed
+          .ig-pics
+          .ig-cta
+            a.btn.btn--outline-invert(href='https://instagram.com/kleinhafen') Follow us on Instagram
+
+block scripts
+  script(src='/js/home.js')

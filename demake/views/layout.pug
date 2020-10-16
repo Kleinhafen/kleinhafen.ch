@@ -1,0 +1,44 @@
+doctype html
+html(lang=(lang || "en"))
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width,initial-scale=1.0')
+    link(rel='icon' href='favicon.ico')
+    title Kleinhafen Coworking &amp; Meeting Rooms in Basel
+    meta(name='description' content='Kleinhafen is a coworking space, offering desks and meeting rooms in the centre of Basel. Come to work every day to a beautiful space with a warm, welcoming community.')
+    meta(property='og:title' content='Kleinhafen Coworking & Meeting Rooms in Basel')
+    meta(property='og:description' content='Kleinhafen is a coworking space, offering desks and meeting rooms in the centre of Basel. Come to work every day to a beautiful space with a warm, welcoming community.')
+    meta(property='og:image' content='https://kleinhafen.ch/card.png')
+    meta(property='og:url' content='https://kleinhafen.ch')
+    meta(property='og:type' content='website')
+    link(rel='stylesheet' href='css/app.css')
+  body
+    .App
+      block content
+    .footer
+      .impressum
+        img(src='/img/kh-logo-black.png')
+        p
+          | Feldbergstrasse 39 & 47
+          br
+          | 4057 Basel
+          br
+          | 061 535 31 86
+          br
+          a(href='mailto:ahoi@kleinhafen.ch') ahoi@kleinhafen.ch
+        a.btn.btn--outline-invert(
+          href='mailto:ahoi@kleinhafen.ch'
+        ) Contact us
+      .bois
+        .socials
+          a.social(href='http://instagram.com/kleinhafen')
+            img(src='/img/social/instagram.svg')
+          a.social(href='https://twitter.com/kleinhafenbasel')
+            img(src='/img/social/twitter.svg')
+          a.social(href='http://www.meetup.com/de-DE/Kleinhafen-inspiriert-arbeiten/')
+            img(src='/img/social/meetup.svg')
+          a.social(href='https://www.facebook.com/kleinhafen/')
+            img(src='/img/social/facebook.svg')
+    script(src='/js/lib.js')
+    block scripts

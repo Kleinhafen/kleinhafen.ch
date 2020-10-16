@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "kleinhafen.ch",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Vlad-Stefan Harbuz <vlad@vladh.net>",
+  "license": "ISC",
+  "homepage": "https://github.com/Kleinhafen/kleinhafen.ch#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-stylus": "^0.1.1",
+    "nodemailer": "^6.4.14",
+    "pug": "^3.0.0",
+    "request": "^2.88.2"
+  }
+}
