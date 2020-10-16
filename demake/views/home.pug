@@ -188,18 +188,10 @@ block content
             .plan__desc
               p= dict['plans.fixedDesk.p1']
               p= dict['plans.fixedDesk.p2']
-            .plan__book
-              button.btn.btn--book(data-click='openInterestForm("fixedDesk")')= dict['plans.membership.bookTour']
             .plan__prices
               .priceset
                 .name= dict['plans.monthly']
                 .price Membership + 200.— CHF
-              .priceset.priceset--dummy
-                .name &nbsp;
-                .price &nbsp;
-              .priceset.priceset--dummy
-                .name &nbsp;
-                .price &nbsp;
             .plan__features
               ul
                 li= dict['plans.flipcharts']
@@ -225,7 +217,7 @@ block content
               li= dict['meetingRooms.list.item4']
               li= dict['meetingRooms.list.item5']
             | #{dict['meetingRooms.list.end']}
-          button.btn.btn--book(data-click='openInterestForm("meetingRoom")')= dict['meetingRooms.bookTour'] 
+          button.btn.btn--book(data-click='openInterestForm("meetingRoom")')= dict['meetingRooms.bookTour']
 
     .storefront.section
       .container
