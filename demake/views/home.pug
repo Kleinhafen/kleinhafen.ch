@@ -23,22 +23,22 @@ block content
           .InterestForm__form(data-form='membership', hidden)
             h2 Let's book a tour.
             .form-group
-              label Your name
+              label= dict['form.name']
               input(type='text', name='name')
             .form-group
-              label Your company
+              label= dict['form.company']
               input(type='text', name='company')
             .form-group
-              label Your email
+              label= dict['form.email']
               input(type='email', name='email')
             .form-group
-              label Your phone number
+              label= dict['form.phone']
               input(type='tel', name='phone')
             .form-group
-              label When would you like to have your tour?
+              label= dict['form.tourDates']
               input(type='text', name='tourDates')
             .form-group
-              label Interested in a fixed desk or a business address?
+              label= dict['form.addons']
               div
                 label
                   input(type='checkbox', name='fixedDesk')
@@ -48,7 +48,7 @@ block content
                   input(type='checkbox', name='businessAddress')
                   | #{dict['plans.addons.address.heading']}
             .form-group
-              label Any questions? :)
+              label= dict['form.membershipDescription']
               textarea(name='description')
             .form-group
               button.btn.btn--block(data-click='submitInterestForm("membership")') Send
@@ -56,25 +56,25 @@ block content
           .InterestForm__form(data-form='meetingRoom', hidden)
             h2 Let's book a meeting room.
             .form-group
-              label Your name
+              label= dict['form.name']
               input(type='text', name='name')
             .form-group
-              label Your company
+              label= dict['form.company']
               input(type='text', name='company')
             .form-group
-              label Your email
+              label= dict['form.email']
               input(type='email', name='email')
             .form-group
-              label Your phone number
+              label= dict['form.phone']
               input(type='tel', name='phone')
             .form-group
-              label How many people?
+              label= dict['form.nPeople']
               input(type='text', name='nPeople')
             .form-group
-              label When would you need our meeting rooms?
+              label= dict['form.meetingRoomDates']
               input(type='text', name='dates')
             .form-group
-              label Tell us more about your event and what we could help you with.
+              label= dict['form.meetingRoomDescription']
               textarea(name='description')
             .form-group
               button.btn.btn--block(data-click='submitInterestForm("meetingRoom")') Send
@@ -82,22 +82,22 @@ block content
           .InterestForm__form(data-form='storefront', hidden)
             h2 Let's book the storefront.
             .form-group
-              label Your name
+              label= dict['form.name']
               input(type='text', name='name')
             .form-group
-              label Your company
+              label= dict['form.company']
               input(type='text', name='company')
             .form-group
-              label Your email
+              label= dict['form.email']
               input(type='email', name='email')
             .form-group
-              label Your phone number
+              label= dict['form.phone']
               input(type='tel', name='phone')
             .form-group
-              label When would you like to rent the storefront from, and for how long?
+              label= dict['form.storefrontDates']
               input(type='text', name='dates')
             .form-group
-              label Tell us more about what you'd like to use the storefront for.
+              label= dict['form.storefrontDescription']
               textarea(name='description')
             .form-group
               button.btn.btn--block(data-click='submitInterestForm("storefront")') Send
