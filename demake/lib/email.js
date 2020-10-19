@@ -3,8 +3,8 @@ const nodemailer = require('nodemailer')
 const config = require('../config/config')
 
 const EMAIL_FROM = 'Kleinhafen <no-reply@kleinhafen.ch>'
-// const EMAIL_TO = 'ahoi@kleinhafen.ch, vlad@vladh.net'
-const EMAIL_TO = 'vlad@vladh.net'
+const EMAIL_TO = 'ahoi@kleinhafen.ch, vlad@vladh.net'
+// const EMAIL_TO = 'vlad@vladh.net'
 const DEBUG_EMAIL_TO = 'vlad@vladh.net'
 
 function makeEmailBodyForFormMessage(msg) {
