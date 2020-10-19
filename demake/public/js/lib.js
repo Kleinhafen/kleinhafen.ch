@@ -36,7 +36,11 @@ function getInterestFormData(formType) {
     `.InterestForm__form[data-form="${formType}"] *[name]`
   );
   els.forEach((el) => {
-    data[el.name] = el.value;
+    if (el.type == 'checkbox') {
+      data[el.name] = el.checked;
+    } else {
+      data[el.name] = el.value;
+    }
   });
   return data;
 }

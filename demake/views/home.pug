@@ -38,34 +38,20 @@ block content
               label When would you like to have your tour?
               input(type='text', name='tourDates')
             .form-group
+              label Interested in a fixed desk or a business address?
+              div
+                label
+                  input(type='checkbox', name='fixedDesk')
+                  | #{dict['plans.addons.fixedDesk.heading']}
+              div
+                label
+                  input(type='checkbox', name='businessAddress')
+                  | #{dict['plans.addons.address.heading']}
+            .form-group
               label Any questions? :)
               textarea(name='description')
             .form-group
               button.btn.btn--block(data-click='submitInterestForm("membership")') Send
-
-          .InterestForm__form(data-form='fixedDesk', hidden)
-            h2 Let's book a fixed desk tour.
-
-            .form-group
-              label Your name
-              input(type='text', name='name')
-            .form-group
-              label Your company
-              input(type='text', name='company')
-            .form-group
-              label Your email
-              input(type='email', name='email')
-            .form-group
-              label Your phone number
-              input(type='tel', name='phone')
-            .form-group
-              label When would you like to have your tour?
-              input(type='text', name='tourDates')
-            .form-group
-              label Any questions? :)
-              textarea(name='description')
-            .form-group
-              button.btn.btn--block(data-click='submitInterestForm("fixedDesk")') Send
 
           .InterestForm__form(data-form='meetingRoom', hidden)
             h2 Let's book a meeting room.
@@ -145,33 +131,22 @@ block content
               | #{dict['plans.membership.heading']}
               small
                 a(href='https://www.google.com/maps/place/Feldbergstrasse+39,+4057+Basel')
-                  | Feldbergstrasse 39
+                  | Feldbergstrasse 39 & 47
                   img.pin(src='/img/pin.svg')
             .plan__desc
               p= dict['plans.membership.p1']
               p= dict['plans.membership.p2']
               p= dict['plans.membership.p3']
-              p= dict['plans.membership.p4']
-            .plan__book
-              button.btn.btn--book(data-click='openInterestForm("membership")')= dict['plans.membership.bookTour']
             .plan__prices
               .priceset
                 .name= dict['plans.monthly']
                 .price 190.— CHF
-              .priceset
-                .name= dict['plans.hourly']
-                .price 5.50 CHF
-              .priceset
-                .name= dict['plans.daily']
-                .price 27.— CHF
             .plan__features
               ul
                 li= dict['plans.location']
-                li= dict['plans.internet']
                 li= dict['plans.coffee']
                 li= dict['plans.tea']
                 li= dict['plans.printer']
-                li= dict['plans.cleaning']
                 li= dict['plans.cancellation']
                 li= dict['plans.contractLength']
                 li= dict['plans.kitchenLoungeGarden']
@@ -179,28 +154,36 @@ block content
 
           .plan.plan--fixed
             .plan__image.coverimage
-            h3
-              | #{dict['plans.fixedDesk.heading']}
-              small
-                a(href='https://www.google.com/maps/place/Feldbergstrasse+47,+4057+Basel')
-                  | Feldbergstrasse 47
-                  img.pin(src='/img/pin.svg')
-            .plan__desc
-              p= dict['plans.fixedDesk.p1']
-              p= dict['plans.fixedDesk.p2']
-            .plan__prices
-              .priceset
-                .name= dict['plans.monthly']
-                .price Membership + 200.— CHF
-            .plan__features
-              ul
-                li= dict['plans.flipcharts']
-                li= dict['plans.projector']
-                li= dict['plans.meetingRoom']
-                li= dict['plans.storage']
-                li= dict['plans.address']
-                li= dict['plans.access']
-                li= dict['plans.useOfBoth']
+
+            h3 Add-ons
+
+            .plan__addon
+              h4= dict['plans.addons.fixedDesk.heading']
+              .plan__desc
+                p= dict['plans.addons.fixedDesk.p1']
+              .plan__prices
+                .priceset
+                  .name= dict['plans.monthly']
+                  .price + 200.— CHF
+              .plan__features
+                ul
+                  li= dict['plans.flipcharts']
+                  li= dict['plans.projector']
+                  li= dict['plans.meetingRoom']
+                  li= dict['plans.storage']
+                  li= dict['plans.access']
+
+            .plan__addon
+              h4= dict['plans.addons.address.heading']
+              .plan__desc
+                p= dict['plans.addons.address.p1']
+              .plan__prices
+                .priceset
+                  .name= dict['plans.monthly']
+                  .price + 100.— CHF
+
+        .plan__book
+          button.btn.btn--book(data-click='openInterestForm("membership")')= dict['plans.membership.bookTour']
 
     .meetingrooms.section
       .container

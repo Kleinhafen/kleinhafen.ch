@@ -11,35 +11,55 @@ function makeEmailBodyForFormMessage(msg) {
   const guard = (d) => (d && d.length > 0) ? d : 'Not known'
 
   const formTypeLine = {
-    flexDesk: `<p>Someone is asking about a flex desk.</p>`,
-    fixedDesk: '<p>Someone is asking about a fixed desk.</p>',
+    membership: `<p>Someone is asking about a membership.</p>`,
     meetingRoom: '<p>Someone is asking about a meeting room.</p>',
     storefront: '<p>Someone is asking about the storefront.</p>',
   }[msg.formType]
 
-  const detailsLine = `
+  let detailsLine = ''
+  let companyLine = ''
+  let peopleLine = ''
+  let datesLine = ''
+  let tourDatesLine = ''
+  let addonsLine = ''
+  let descriptionLine = ''
+
+  detailsLine = `
     <tr><td>Name</td><td>${guard(msg.name)}</td></tr>
     <tr><td>Email</td><td>${guard(msg.email)}</td></tr>
     <tr><td>Phone number</td><td>${guard(msg.phone)}</td></tr>
   `
 
-  const companyLine = ((!msg.company || msg.company.length == 0) ? '' : `
-    <tr><td>Company</td><td>${guard(msg.company)}</td></tr>
-  `)
+  companyLine = `<tr><td>Company</td><td>${guard(msg.company)}</td></tr>`;
 
-  const peopleLine = ((!msg.nPeople || msg.nPeople.length == 0) ? '' : `
-    <tr><td>Number of people</td><td>${guard(msg.nPeople)}</td></tr>
-  `)
+  if (msg.formType == 'meetingRoom') {
+    peopleLine = `<tr><td>Number of people</td><td>${guard(msg.nPeople)}</td></tr>`
+  }
 
-  const datesLine = ((!msg.dates || msg.dates.length == 0) ? '' : `
-    <tr><td>Date(s) needed</td><td>${guard(msg.dates)}</td></tr>
-  `)
+  if (msg.formType == 'meetingRoom' || msg.formType == 'storefront') {
+    datesLine = `<tr><td>Date(s) needed</td><td>${guard(msg.dates)}</td></tr>`
+  }
 
-  const tourDatesLine = ((!msg.tourDates || msg.tourDates.length == 0) ? '' : `
-    <tr><td>Tour dates</td><td>${guard(msg.tourDates)}</td></tr>
-  `)
+  if (msg.formType == 'membership') {
+    tourDatesLine = `<tr><td>Tour dates</td><td>${guard(msg.tourDates)}</td></tr>`
 
-  const descriptionLine = `<tr><td>Description</td><td>${guard(msg.description)}</td></tr>`
+    const addonsList = []
+    if (msg.fixedDesk) {
+      addonsList.push('Fixed desk')
+    }
+    if (msg.businessAddress) {
+      addonsList.push('Business address')
+    }
+    let addonsBody;
+    if (addonsList.length > 0) {
+      addonsBody = addonsList.join(', ')
+    } else {
+      addonsBody = 'None'
+    }
+    addonsLine = `<tr><td>Addons requested</td><td>${addonsBody}</td></tr>`
+  }
+
+  descriptionLine = `<tr><td>Description</td><td>${guard(msg.description)}</td></tr>`
 
   return `
   <p>Ahoi!</p>
@@ -50,6 +70,7 @@ function makeEmailBodyForFormMessage(msg) {
   ${detailsLine}
   ${companyLine}
   ${peopleLine}
+  ${addonsLine}
   ${datesLine}
   ${tourDatesLine}
   ${descriptionLine}

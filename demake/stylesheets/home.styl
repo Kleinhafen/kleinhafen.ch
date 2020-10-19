@@ -34,6 +34,8 @@
       margin 0 -2rem
       +respond-below(lg-screen)
         display block
+    .plan__book
+      margin 2rem 0
 
   .bubble
     display inline-block
@@ -68,19 +70,24 @@
           height 1rem
           margin-left 0.5rem
           vertical-align -2px
-    .plan__desc
-      min-height 8rem
-      +respond-below(lg-screen)
-        min-height 0
+    h4
+      display inline-block
+      margin 0
+      margin-bottom 1rem
+      border-bottom 1px solid color-dark
+      font-size 1rem
+
+    .plan__addon
+      margin-bottom 4rem
+      &:last-child
+        margin-bottom 0
+
     .plan__prices
-      margin 2rem 0
-    .plan__book
       margin 2rem 0
     .plan__features
       margin 2rem 0
       margin-bottom 0
       columns 2
-      min-height 16rem
       +respond-below(md-screen)
         columns 1
       ul
