@@ -1,5 +1,6 @@
 module.exports = {
   "en": {
+    "intro.heading": "The Coworking Experience",
     "intro.p1": "Coworking fosters collaboration and the exchange of ideas between innovative people – and all of this happens everyday during our coffee break.",
     "intro.p2": "Coworking is on the pulse of workplace innovation. The business world is changing.The modern workforce is different; business needs are different; we are different.",
     "intro.p3": "Coworking provides flexibility in a friendly, dynamic workspace without having to invest in infrastructure or binding rental contracts.",
