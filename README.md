@@ -1,47 +1,29 @@
-# kleinhafen.ch
+# Kleinhafen API
 
-This is the Kleinhafen website!
+This project serves the kleinhafen.ch website, as well as the small API
+required for it.
 
 ## Configuration
 
-Set the URL to the Kleinhafen API in `config.js`, with a trailing slash:
-
-```
-apiUrl: 'https://kleinhafen.ch/api/',
-```
-
-If the website uses HTTPS, note that this URL needs to be HTTPS too.
+The SMTP username and password for the emails should be set in
+`config/config.js`.
 
 Install dependencies with `npm install`.
 
 ## Development
 
-Run the development serve with `npm run serve`.
+To start the server, run `node server.js`.
 
 ## Production
 
-Compile the website as static files for production with `npm run build`.
-You can then point an e.g. nginx server to the `dist/` folder.
+Production deployments are done using Supervisor. To start the server, simply
+run `supervisord`.
 
-## To do
-
-### Do now
-
-* [ ] Add German version
-* [x] Change pricing structure: Membership (190.—), Fix Desk (+200.—)
-* [x] Remove duplicate features between the two plans
-* [ ] Renew SSL
-
-### Stuff we need
-
-* [ ] Change text for flex desk → KH membership?
-* [ ] Hourly/daily prices for flex desk → KH membership?
-
-### Wait for materials
-
-* [ ] Make features clearer
-* [ ] Update photos for plans
-* [ ] Update header video
+To stop the server, kill the PID stored in `supervisord.pid`.
+`kill $(cat supervisord.pid)` will suffice to stop the Supervisor instance.
+The server itself then probably also needs to be killed — find it with
+`ps aux | grep node` and kill it with `kill`. Maybe we can improve this
+process in the future.
 
 ## Author / Contact
 

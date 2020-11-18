@@ -1,8 +1,10 @@
-config/config.js
+public/css/*
+config/config.json
+supervisord.log
+supervisord.pid
 
 .DS_Store
 node_modules
-/dist
 
 # local env files
 .env.local
